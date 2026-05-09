@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-primary: #0B3D91;
+  --color-accent: #F2C94C;
+  --color-charcoal: #333333;
+}
+
+body {
+  @apply bg-white text-charcoal font-sans antialiased overflow-x-hidden;
+}
+
+/* Base focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2;
+}
