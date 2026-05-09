@@ -10,6 +10,14 @@ import Programs from './pages/Programs';
 import ProgramCommunityCare from './pages/ProgramCommunityCare';
 import ProgramWorkforce from './pages/ProgramWorkforce';
 import ProgramYouth from './pages/ProgramYouth';
+import GetInvolved from './pages/GetInvolved';
+import Events from './pages/Events';
+import EventDetail from './pages/EventDetail';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Accessibility from './pages/Accessibility';
 
 function App() {
   const { t } = useTranslation();
@@ -33,6 +41,14 @@ function App() {
           <Route path="/programs/community-care" element={<ProgramCommunityCare />} />
           <Route path="/programs/workforce" element={<ProgramWorkforce />} />
           <Route path="/programs/youth" element={<ProgramYouth />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/events/:eventId" element={<EventDetail />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:postId" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/accessibility" element={<Accessibility />} />
           <Route path="/donate" element={<Donate />} />
         </Routes>
       </main>

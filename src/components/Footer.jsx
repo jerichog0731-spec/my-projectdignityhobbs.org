@@ -70,7 +70,10 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
           <p>{t('footer.rights')}</p>
-          <div className="mt-4 md:mt-0 space-x-4">
+          <div className="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
+            <a href="/privacy" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none">Privacy Policy</a>
+            <a href="/accessibility" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none">Accessibility Statement</a>
+            <span className="hidden md:inline">|</span>
             <a href="#" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none" aria-label="Facebook">Facebook</a>
             <a href="#" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none" aria-label="Twitter">Twitter</a>
             <a href="#" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none" aria-label="Instagram">Instagram</a>
