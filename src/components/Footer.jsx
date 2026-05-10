@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import NewsletterSignup from './NewsletterSignup';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -45,26 +46,7 @@ const Footer = () => {
           
           <div>
             <h3 className="font-bold text-lg mb-4 text-accent">{t('nav.newsletter')}</h3>
-            <form className="flex flex-col sm:flex-row gap-2" onSubmit={(e) => {
-                e.preventDefault(); 
-                document.getElementById('aria-live-region').textContent = 'Thank you for subscribing to our newsletter.';
-                alert('Newsletter subscription simulated.');
-              }}>
-              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-              <input 
-                type="email" 
-                id="newsletter-email"
-                placeholder={t('home.newsletter.placeholder')} 
-                className="px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-accent w-full"
-                required
-              />
-              <button 
-                type="submit" 
-                className="bg-primary hover:bg-blue-800 text-white px-4 py-2 rounded-md font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent whitespace-nowrap"
-              >
-                {t('home.newsletter.button')}
-              </button>
-            </form>
+            <NewsletterSignup />
           </div>
         </div>
         

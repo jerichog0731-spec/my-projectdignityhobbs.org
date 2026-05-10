@@ -18,6 +18,8 @@ import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Accessibility from './pages/Accessibility';
+import SupabaseTodos from './pages/SupabaseTodos';
+import ThankYou from './pages/ThankYou';
 
 function App() {
   const { t } = useTranslation();
@@ -49,6 +51,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/accessibility" element={<Accessibility />} />
+          <Route path="/todos-preview" element={<SupabaseTodos />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/donate" element={<Donate />} />
         </Routes>
       </main>
