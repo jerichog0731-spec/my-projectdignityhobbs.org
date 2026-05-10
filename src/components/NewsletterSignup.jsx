@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createClient } from '../utils/supabase/client';
 
@@ -9,39 +9,15 @@ const NewsletterSignup = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const redirectTimerRef = useRef(null);
 
-  const insertSubscriber = async (supabase, nameValue, normalizedEmail) => {
-    const payloads = [
-      { first_name: nameValue, email: normalizedEmail },
-      { name: nameValue, email: normalizedEmail },
-      { firstName: nameValue, email: normalizedEmail },
-      { full_name: nameValue, email: normalizedEmail },
-    ];
-
-    let lastError = null;
-
-    for (const payload of payloads) {
-      const { error } = await supabase.from('newsletter_subscribers').insert([payload]);
-
-      if (!error) {
-        return null;
+  useEffect(() => {
+    return () => {
+      if (redirectTimerRef.current) {
+        window.clearTimeout(redirectTimerRef.current);
       }
-
-      lastError = error;
-
-      const missingColumn =
-        error.code === 'PGRST204' &&
-        /Could not find the .* column of 'newsletter_subscribers'/i.test(error.message || '');
-
-      if (missingColumn) {
-        continue;
-      }
-
-      return error;
-    }
-
-    return lastError;
-  };
+    };
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -70,7 +46,12 @@ const NewsletterSignup = () => {
         return;
       }
 
-      const insertError = await insertSubscriber(supabase, firstName.trim(), normalizedEmail);
+      const { error: insertError } = await supabase.from('newsletter_subscribers').insert([
+        {
+          first_name: firstName.trim(),
+          email: normalizedEmail,
+        },
+      ]);
 
       if (insertError) {
         const duplicateError =
@@ -83,7 +64,7 @@ const NewsletterSignup = () => {
 
         const schemaMismatchError =
           insertError.code === 'PGRST204' ||
-          /column of 'newsletter_subscribers'|schema cache/i.test(insertError.message || '');
+          /first_name|column of 'newsletter_subscribers'|schema cache/i.test(insertError.message || '');
 
         if (duplicateError) {
           setErrorMessage('You are already subscribed. Thank you for staying with us.');
@@ -92,13 +73,13 @@ const NewsletterSignup = () => {
         }
 
         if (permissionError) {
-          setErrorMessage('Signup is temporarily unavailable due to permissions setup. Please try again shortly.');
+          setErrorMessage('Signup is temporarily unavailable. Admin needs to enable an INSERT policy for newsletter_subscribers.');
           setIsSubmitting(false);
           return;
         }
 
         if (schemaMismatchError) {
-          setErrorMessage('Signup is temporarily unavailable while we finish setup. Please try again shortly.');
+          setErrorMessage('Signup is temporarily unavailable. Admin needs to add a first_name column to newsletter_subscribers.');
           setIsSubmitting(false);
           return;
         }
@@ -112,8 +93,12 @@ const NewsletterSignup = () => {
       }
 
       setSuccessMessage('Success. Welcome to the movement. Redirecting...');
-      window.setTimeout(() => {
-        navigate('/thank-you');
+      redirectTimerRef.current = window.setTimeout(() => {
+        setIsSubmitting(false);
+        setFirstName('');
+        setEmail('');
+        setSuccessMessage('');
+        navigate('/thank-you', { replace: true });
       }, 700);
     } catch (error) {
       // Keep this for debugging in dev tools without exposing internals to users.
