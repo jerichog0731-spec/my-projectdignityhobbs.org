@@ -60,17 +60,17 @@ const GetInvolved = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="vol-name" className="block text-sm font-medium text-gray-700 mb-1">{t('involved.form.name')} *</label>
-                      <input type="text" id="vol-name" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                      <input type="text" id="vol-name" required placeholder="Enter your full name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
                     </div>
                     <div>
                       <label htmlFor="vol-phone" className="block text-sm font-medium text-gray-700 mb-1">{t('involved.form.phone')} *</label>
-                      <input type="tel" id="vol-phone" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                      <input type="tel" id="vol-phone" required placeholder="Optional" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="vol-email" className="block text-sm font-medium text-gray-700 mb-1">{t('involved.form.email')} *</label>
-                    <input type="email" id="vol-email" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                    <input type="email" id="vol-email" required placeholder="you@domain.org" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
                   </div>
                   
                   <div>

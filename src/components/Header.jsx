@@ -48,9 +48,10 @@ const Header = () => {
             <button 
               onClick={toggleLanguage}
               className="flex items-center gap-2 bg-charcoal hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-              aria-label="Toggle language"
+              aria-label={i18n.language === 'en' ? 'Switch to Spanish' : 'Cambiar a Inglés'}
+              lang={i18n.language === 'en' ? 'es' : 'en'}
             >
-              <Globe size={18} />
+              <Globe size={18} aria-hidden="true" />
               <span className="font-semibold uppercase">{i18n.language === 'en' ? 'ES' : 'EN'}</span>
             </button>
           </nav>
@@ -86,8 +87,10 @@ const Header = () => {
             <button 
               onClick={toggleLanguage}
               className="flex items-center gap-2 bg-charcoal text-white px-4 py-3 rounded-md mt-4 w-full justify-center"
+              aria-label={i18n.language === 'en' ? 'Switch to Spanish' : 'Cambiar a Inglés'}
+              lang={i18n.language === 'en' ? 'es' : 'en'}
             >
-              <Globe size={18} />
+              <Globe size={18} aria-hidden="true" />
               <span className="font-semibold">{i18n.language === 'en' ? 'Español' : 'English'}</span>
             </button>
           </nav>

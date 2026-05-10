@@ -77,7 +77,7 @@ const Home = () => {
                     <p className="text-gray-600 leading-relaxed mb-6">{t(`home.programs.${num}.desc`)}</p>
                   </div>
                   <Link to="/about" className="text-primary font-bold hover:text-blue-800 transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded p-1">
-                    Learn More
+                    {t('home.programs.learn_more')}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                   </Link>
                 </div>

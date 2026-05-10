@@ -16,7 +16,7 @@ const Blog = () => {
 
   return (
     <>
-      <SEO title={t('seo.blog.title')} description={t('seo.blog.desc')} path="/blog" />
+      <SEO title={t('seo.blog.title')} description={t('seo.blog.desc')} path="/blog" breadcrumbs={[{ name: 'News', path: '/blog' }]} />
       
       <div className="bg-primary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

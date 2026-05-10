@@ -21,22 +21,13 @@ const BlogPost = () => {
       <SEO 
         title={`${title} | Blog`} 
         description={summary} 
-        path={`/blog/${id}`} 
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": title,
-          "author": {
-            "@type": "Person",
-            "name": author
-          },
-          "datePublished": "2026-01-01T08:00:00+08:00", // Placeholder for actual parseable date
-          "description": summary,
-          "publisher": {
-            "@type": "NGO",
-            "name": "Project Dignity Hobbs"
-          }
-        }}
+        path={`/blog/${id}`}
+        type="article"
+        article={{ datePublished: date }}
+        breadcrumbs={[
+          { name: 'News', path: '/blog' },
+          { name: title, path: `/blog/${id}` }
+        ]}
       />
       
       <div className="bg-gray-50 py-12 md:py-20 min-h-screen">

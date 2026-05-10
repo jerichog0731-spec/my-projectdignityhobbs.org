@@ -13,7 +13,15 @@ const EventDetail = () => {
 
   return (
     <>
-      <SEO title={`${t(`events.list.${id}.title`)} | RSVP`} description={t('seo.event_detail.desc')} path={`/events/${id}`} />
+      <SEO 
+        title={`${t(`events.list.${id}.title`)} | RSVP`} 
+        description={t('seo.event_detail.desc')} 
+        path={`/events/${id}`}
+        breadcrumbs={[
+          { name: 'Events', path: '/events' },
+          { name: t(`events.list.${id}.title`), path: `/events/${id}` }
+        ]}
+      />
       
       <div className="bg-gray-50 py-12 md:py-20 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

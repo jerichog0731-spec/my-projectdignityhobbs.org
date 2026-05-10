@@ -131,11 +131,11 @@ const Donate = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
                   <div>
                     <label htmlFor="donor-name" className="block text-sm font-bold text-gray-700 mb-2">{t('donate.form.name')} *</label>
-                    <input type="text" id="donor-name" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                    <input type="text" id="donor-name" required placeholder="Enter your full name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
                   </div>
                   <div>
                     <label htmlFor="donor-email" className="block text-sm font-bold text-gray-700 mb-2">{t('donate.form.email')} *</label>
-                    <input type="email" id="donor-email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                    <input type="email" id="donor-email" required placeholder="you@domain.org" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
                   </div>
                 </div>
 

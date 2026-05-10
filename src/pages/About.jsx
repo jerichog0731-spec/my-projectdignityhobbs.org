@@ -10,7 +10,8 @@ const About = () => {
       <SEO 
         title={t('seo.about.title')} 
         description={t('seo.about.desc')} 
-        path="/about" 
+        path="/about"
+        breadcrumbs={[{ name: 'About', path: '/about' }]}
       />
       
       {/* Header / Mission & Vision */}

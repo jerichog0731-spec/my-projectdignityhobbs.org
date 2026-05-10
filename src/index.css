@@ -9,6 +9,13 @@
   --color-charcoal: #333333;
 }
 
+:root {
+  --color-primary: #0B3D91;
+  --color-accent: #F2C94C;
+  --color-text: #333333;
+  --color-bg: #FFFFFF;
+}
+
 body {
   @apply bg-white text-charcoal font-sans antialiased overflow-x-hidden;
 }

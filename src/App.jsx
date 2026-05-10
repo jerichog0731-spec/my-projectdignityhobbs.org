@@ -57,7 +57,8 @@ function App() {
       {/* ARIA Live Region for dynamic alerts */}
       <div 
         aria-live="polite" 
-        aria-atomic="true" 
+        aria-atomic="true"
+        aria-label="Submission status"
         className="sr-only" 
         id="aria-live-region"
       ></div>

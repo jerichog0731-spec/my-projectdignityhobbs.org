@@ -10,17 +10,11 @@ const ProgramCommunityCare = () => {
       <SEO 
         title={t('seo.community.title')} 
         description={t('seo.community.desc')} 
-        path="/programs/community-care" 
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": t('community.title'),
-          "description": t('community.desc'),
-          "provider": {
-            "@type": "NGO",
-            "name": "Project Dignity Hobbs"
-          }
-        }}
+        path="/programs/community-care"
+        breadcrumbs={[
+          { name: 'Programs', path: '/programs' },
+          { name: 'Community Care', path: '/programs/community-care' }
+        ]}
       />
       
       <div className="bg-primary py-20">

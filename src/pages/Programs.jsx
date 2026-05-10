@@ -11,7 +11,8 @@ const Programs = () => {
       <SEO 
         title={t('seo.programs.title')} 
         description={t('seo.programs.desc')} 
-        path="/programs" 
+        path="/programs"
+        breadcrumbs={[{ name: 'Programs', path: '/programs' }]}
       />
       
       <div className="bg-primary py-20 md:py-32">

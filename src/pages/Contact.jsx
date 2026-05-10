@@ -6,6 +6,18 @@ import SEO from '../components/SEO';
 const Contact = () => {
   const { t } = useTranslation();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validate = (fields) => {
+    const errs = {};
+    if (!fields.name.trim()) errs.name = t('form.validation.required');
+    if (!fields.email.trim()) errs.email = t('form.validation.required');
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) errs.email = t('form.validation.email');
+    if (!fields.subject.trim()) errs.subject = t('form.validation.required');
+    if (!fields.message.trim()) errs.message = t('form.validation.required');
+    return errs;
+  };
 
   return (
     <>
@@ -99,33 +111,61 @@ const Contact = () => {
                 ) : (
                   <form 
                     className="space-y-6"
+                    noValidate
                     onSubmit={(e) => {
                       e.preventDefault();
-                      setIsSuccess(true);
-                      document.getElementById('aria-live-region').textContent = t('contact.form.success');
+                      const fd = new FormData(e.target);
+                      const fields = {
+                        name: fd.get('name') || '',
+                        email: fd.get('email') || '',
+                        subject: fd.get('subject') || '',
+                        message: fd.get('message') || '',
+                      };
+                      const errs = validate(fields);
+                      if (Object.keys(errs).length > 0) {
+                        setErrors(errs);
+                        return;
+                      }
+                      setErrors({});
+                      try {
+                        setIsSuccess(true);
+                        setIsError(false);
+                        document.getElementById('aria-live-region').textContent = t('contact.form.success');
+                      } catch {
+                        setIsError(true);
+                        document.getElementById('aria-live-region').textContent = t('contact.form.error');
+                      }
                     }}
                   >
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.name')} *</label>
-                      <input type="text" id="name" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                      <input type="text" id="name" name="name" required placeholder="Enter your full name" className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.name ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.name ? 'err-name' : undefined} />
+                      {errors.name && <p id="err-name" role="alert" className="mt-1 text-sm text-red-600">{errors.name}</p>}
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.email')} *</label>
-                      <input type="email" id="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                      <input type="email" id="email" name="email" required placeholder="you@domain.org" className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.email ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.email ? 'err-email' : undefined} />
+                      {errors.email && <p id="err-email" role="alert" className="mt-1 text-sm text-red-600">{errors.email}</p>}
                     </div>
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.subject')} *</label>
-                      <input type="text" id="subject" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" />
+                      <input type="text" id="subject" name="subject" required className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.subject ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.subject ? 'err-subject' : undefined} />
+                      {errors.subject && <p id="err-subject" role="alert" className="mt-1 text-sm text-red-600">{errors.subject}</p>}
                     </div>
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.message')} *</label>
-                      <textarea id="message" rows="5" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"></textarea>
+                      <textarea id="message" name="message" rows="5" required className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.message ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.message ? 'err-message' : undefined}></textarea>
+                      {errors.message && <p id="err-message" role="alert" className="mt-1 text-sm text-red-600">{errors.message}</p>}
                     </div>
 
                     <button type="submit" className="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-xl transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-accent shadow-md hover:-translate-y-1 hover:shadow-lg flex justify-center items-center gap-2">
                       {t('contact.form.submit')}
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </button>
+
+                    {isError && (
+                      <p role="alert" className="text-sm text-red-600 text-center">{t('contact.form.error')}</p>
+                    )}
 
                     <p className="text-xs text-gray-400 text-center mt-4">
                       {t('contact.form.spam_note')}

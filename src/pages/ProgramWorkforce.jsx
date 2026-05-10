@@ -10,17 +10,11 @@ const ProgramWorkforce = () => {
       <SEO 
         title={t('seo.workforce.title')} 
         description={t('seo.workforce.desc')} 
-        path="/programs/workforce" 
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": t('workforce.title'),
-          "description": t('workforce.desc'),
-          "provider": {
-            "@type": "NGO",
-            "name": "Project Dignity Hobbs"
-          }
-        }}
+        path="/programs/workforce"
+        breadcrumbs={[
+          { name: 'Programs', path: '/programs' },
+          { name: 'Workforce Pathways', path: '/programs/workforce' }
+        ]}
       />
       
       <div className="bg-primary py-20">
