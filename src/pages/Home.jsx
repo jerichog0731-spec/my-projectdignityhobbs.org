@@ -46,81 +46,10 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-charcoal/20">
           {[1, 2, 3].map((num) => (
             <div key={num} className="pt-4 md:pt-0 flex flex-col items-center justify-center">
-              <span className="text-4xl md:text-5xl font-black mb-2">{t(`home.metrics.${num}.value`)}</span>
+              <span className="text-2xl md:text-3xl font-black mb-2 italic opacity-60">Coming Soon</span>
               <span className="text-lg font-medium font-serif">{t(`home.metrics.${num}.label`)}</span>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Program Preview Cards Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">{t('home.programs.title')}</h2>
-            <div className="w-24 h-1 bg-accent mx-auto"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gray-200">
-                  <img 
-                    src={`https://images.unsplash.com/photo-${num === 1 ? '1593113563332-6a848ff78096' : num === 2 ? '1582213782179-e0d53f98f2ca' : '1526976663112-91229c15e802'}?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80`} 
-                    alt={t(`home.programs.${num}.title`)}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-8 flex-grow flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4 text-primary">{t(`home.programs.${num}.title`)}</h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">{t(`home.programs.${num}.desc`)}</p>
-                  </div>
-                  <Link to="/about" className="text-primary font-bold hover:text-blue-800 transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded p-1">
-                    {t('home.programs.learn_more')}
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest News Teasers Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">{t('home.news.title')}</h2>
-              <div className="w-24 h-1 bg-accent"></div>
-            </div>
-            <a href="#" className="hidden md:inline-flex text-primary font-bold hover:text-blue-800 transition-colors items-center gap-2 mt-4 md:mt-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded p-1">
-              View All News
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-          </div>
-
-          <div className="space-y-6">
-            {[1, 2, 3].map((num) => (
-              <a key={num} href="#" className="block bg-gray-50 rounded-xl p-6 md:p-8 hover:bg-gray-100 transition-colors border-l-4 border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-sm">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-2">{t(`home.news.${num}.title`)}</h3>
-                    <p className="text-gray-600">{t(`home.news.${num}.desc`)}</p>
-                  </div>
-                  <div className="shrink-0 text-primary">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-          
-          <a href="#" className="md:hidden mt-8 inline-flex text-primary font-bold hover:text-blue-800 transition-colors items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded p-1">
-            View All News
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </a>
         </div>
       </section>
 
@@ -142,12 +71,12 @@ const Home = () => {
         <div className="flex-1 p-12 md:p-24 flex flex-col items-start justify-center bg-blue-900">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">{t('home.volunteer_cta.title')}</h2>
           <p className="text-xl mb-10 text-gray-300">{t('home.volunteer_cta.desc')}</p>
-          <a 
-            href="mailto:hello@projectdignity.org" 
+          <Link 
+            to="/volunteer" 
             className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-lg transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-accent"
           >
             {t('home.volunteer_cta.button')}
-          </a>
+          </Link>
         </div>
       </section>
     </>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
-const BASE_URL = 'https://projectdignity.org';
+const BASE_URL = 'https://projectdignityhobbs.org';
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
 
 // Page types: 'website' | 'article' | 'breadcrumb'
@@ -126,6 +126,17 @@ const SEO = ({ title, description, path = '/', type = 'website', breadcrumbs, ar
       {articleSchema && (
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       )}
+
+      {/* Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SYBBFYC33"></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0SYBBFYC33');
+        `}
+      </script>
     </Helmet>
   );
 };
