@@ -10,10 +10,27 @@ const Footer = () => {
     <footer className="bg-charcoal text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Partner */}
+        {/* Partners */}
         <div className="mb-16 border-b border-gray-700 pb-12">
-          <h3 className="text-center font-bold text-gray-400 uppercase tracking-widest mb-6">{t('footer.partners_title')}</h3>
-          <p className="text-center text-gray-300">{t('footer.partner.1')}</p>
+          <h3 className="text-center font-bold text-gray-400 uppercase tracking-widest mb-8">{t('footer.partners_title')}</h3>
+          <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-20">
+            <div>
+              <p className="text-center text-gray-500 text-xs uppercase tracking-widest mb-3">{t('footer.dist_partners_title')}</p>
+              <ul className="space-y-1 text-center text-gray-300 text-sm">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <li key={n}>{t(`footer.partner.${n}`)}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-center text-gray-500 text-xs uppercase tracking-widest mb-3">{t('footer.vol_partners_title')}</p>
+              <ul className="space-y-1 text-center text-gray-300 text-sm">
+                {[1, 2].map((n) => (
+                  <li key={n}>{t(`footer.vol_partner.${n}`)}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

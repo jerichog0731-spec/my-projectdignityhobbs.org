@@ -124,8 +124,8 @@ const Volunteer = () => {
 
           <p className="text-center text-sm text-gray-500 mt-6">
             Questions? Email us at{' '}
-            <a href="mailto:jerichog0731@gmail.com" className="text-primary font-medium hover:underline">
-              jerichog0731@gmail.com
+            <a href="mailto:jgutierrez@projectdignityhobbs.org" className="text-primary font-medium hover:underline">
+              jgutierrez@projectdignityhobbs.org
             </a>
           </p>
         </div>
