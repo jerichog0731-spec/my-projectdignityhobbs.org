@@ -12,9 +12,10 @@ const Programs = () => {
         title={t('seo.programs.title')} 
         description={t('seo.programs.desc')} 
         path="/programs"
-        breadcrumbs={[{ name: 'Programs', path: '/programs' }]}
+        breadcrumbs={[{ name: t('nav.programs'), path: '/programs' }]}
       />
       
+      {/* Hero */}
       <div className="bg-primary py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
@@ -26,71 +27,77 @@ const Programs = () => {
         </div>
       </div>
 
-      <section className="py-24 bg-gray-50">
+      {/* What We Distribute */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12">
-            
-            {/* Community Care */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
-              <div className="h-56 bg-gray-200 relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1593113563332-6a848ff78096?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Volunteers sorting food"
-                  className="w-full h-full object-cover"
-                />
+          <div className="grid md:grid-cols-3 gap-8">
+            {['hygiene', 'laundry', 'cleaning'].map((cat) => (
+              <div key={cat} className="bg-white rounded-2xl shadow-md border-t-4 border-accent p-8">
+                <h2 className="text-xl font-bold text-primary mb-4">{t(`programs.${cat}.title`)}</h2>
+                <p className="text-gray-600 leading-relaxed text-sm">{t(`programs.${cat}.desc`)}</p>
+                {cat === 'cleaning' && (
+                  <p className="mt-4 text-xs font-bold text-accent uppercase tracking-wider">{t('programs.cleaning.unique')}</p>
+                )}
               </div>
-              <div className="p-8 flex-grow flex flex-col justify-between">
-                <div>
-                  <h2 className="text-2xl font-bold mb-4 text-primary">{t('programs.community.title')}</h2>
-                  <p className="text-gray-600 leading-relaxed mb-8">{t('programs.community.desc')}</p>
-                </div>
-                <Link to="/programs/community-care" className="bg-accent hover:bg-yellow-500 text-charcoal text-center font-bold py-3 px-6 rounded-lg transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary w-full">
-                  {t('programs.community.link')}
-                </Link>
-              </div>
-            </div>
-
-            {/* Workforce Pathways */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
-              <div className="h-56 bg-gray-200 relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Job training workshop"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8 flex-grow flex flex-col justify-between">
-                <div>
-                  <h2 className="text-2xl font-bold mb-4 text-primary">{t('programs.workforce.title')}</h2>
-                  <p className="text-gray-600 leading-relaxed mb-8">{t('programs.workforce.desc')}</p>
-                </div>
-                <Link to="/programs/workforce" className="bg-accent hover:bg-yellow-500 text-charcoal text-center font-bold py-3 px-6 rounded-lg transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary w-full">
-                  {t('programs.workforce.link')}
-                </Link>
-              </div>
-            </div>
-
-            {/* Youth & Family */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
-              <div className="h-56 bg-gray-200 relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1526976663112-91229c15e802?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Youth mentoring session"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8 flex-grow flex flex-col justify-between">
-                <div>
-                  <h2 className="text-2xl font-bold mb-4 text-primary">{t('programs.youth.title')}</h2>
-                  <p className="text-gray-600 leading-relaxed mb-8">{t('programs.youth.desc')}</p>
-                </div>
-                <Link to="/programs/youth" className="bg-accent hover:bg-yellow-500 text-charcoal text-center font-bold py-3 px-6 rounded-lg transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary w-full">
-                  {t('programs.youth.link')}
-                </Link>
-              </div>
-            </div>
-
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">{t('programs.how_title')}</h2>
+            <div className="w-24 h-1 bg-accent mx-auto"></div>
+          </div>
+          <ol className="space-y-8">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <li key={num} className="flex gap-6 items-start">
+                <span className="flex-shrink-0 w-10 h-10 bg-accent text-charcoal font-extrabold text-lg rounded-full flex items-center justify-center shadow">
+                  {num}
+                </span>
+                <div>
+                  <h3 className="text-lg font-bold text-primary mb-1">{t(`programs.how.${num}.title`)}</h3>
+                  <p className="text-gray-600 leading-relaxed">{t(`programs.how.${num}.desc`)}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="py-20 bg-primary text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('programs.serve.title')}</h2>
+            <p className="text-gray-200 text-lg max-w-3xl mx-auto">{t('programs.serve.body')}</p>
+          </div>
+          <ul className="grid sm:grid-cols-2 gap-4">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <li key={num} className="flex items-start gap-3 bg-blue-900 rounded-xl p-4 border border-blue-800">
+                <svg className="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-200">{t(`programs.serve.${num}`)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-accent text-charcoal text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold mb-4">{t('programs.cta.title')}</h2>
+          <p className="text-lg mb-8 leading-relaxed">{t('programs.cta.desc')}</p>
+          <Link
+            to="/volunteer"
+            className="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary shadow-lg"
+          >
+            {t('programs.cta.button')}
+          </Link>
         </div>
       </section>
     </>

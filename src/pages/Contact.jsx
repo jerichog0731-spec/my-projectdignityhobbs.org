@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const Contact = () => {
@@ -38,55 +37,73 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             
-            {/* Contact Info & Map */}
-            <div className="space-y-12">
-              <div>
-                <h2 className="text-2xl font-bold text-primary mb-6">{t('contact.info.title')}</h2>
-                
-                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-8">
-                  <div className="mb-6">
-                    <h3 className="font-bold text-charcoal text-lg flex items-center gap-2 mb-2">
-                      <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                      {t('contact.info.address')}
-                    </h3>
-                    <p className="text-gray-600 whitespace-pre-line pl-7">{t('contact.info.address_val')}</p>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h3 className="font-bold text-charcoal text-lg flex items-center gap-2 mb-2">
-                      <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                      {t('contact.info.hours')}
-                    </h3>
-                    <p className="text-gray-600 whitespace-pre-line pl-7">{t('contact.info.hours_val')}</p>
-                  </div>
-                  
+            {/* Contact Info */}
+            <div>
+              <h2 className="text-2xl font-bold text-primary mb-6">{t('contact.info.title')}</h2>
+              <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-6">
+
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
                   <div>
-                    <h3 className="font-bold text-charcoal text-lg flex items-center gap-2 mb-2">
-                      <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                      Email
-                    </h3>
-                    <p className="text-gray-600 pl-7">
-                      <a href="mailto:hello@projectdignity.org" className="hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">hello@projectdignity.org</a>
-                    </p>
+                    <h3 className="font-bold text-charcoal text-lg">{t('contact.info.email_label')}</h3>
+                    <a href={`mailto:${t('contact.info.email_val')}`} className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+                      {t('contact.info.email_val')}
+                    </a>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 flex items-start gap-4">
-                  <svg className="w-6 h-6 text-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                   <div>
-                    <p className="text-blue-900 font-medium">
-                      <Link to="/about" className="underline hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">{t('contact.info.staff_link')}</Link>
-                    </p>
+                    <h3 className="font-bold text-charcoal text-lg">{t('contact.info.phone_label')}</h3>
+                    <a href={`tel:${t('contact.info.phone_val')}`} className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+                      {t('contact.info.phone_val')}
+                    </a>
                   </div>
                 </div>
-              </div>
 
-              {/* Map Placeholder */}
-              <div className="h-64 bg-gray-200 rounded-2xl overflow-hidden relative border border-gray-100">
-                <div className="absolute inset-0 flex items-center justify-center flex-col text-gray-500 bg-gray-100">
-                  <svg className="w-10 h-10 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                  <span>Interactive Map Embed Placeholder</span>
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <div>
+                    <h3 className="font-bold text-charcoal text-lg">{t('contact.info.location_label')}</h3>
+                    <p className="text-gray-600">{t('contact.info.location_val')}</p>
+                  </div>
                 </div>
+
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <h3 className="font-bold text-charcoal text-lg">{t('contact.info.hours_label')}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{t('contact.info.hours_val')}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <div>
+                    <h3 className="font-bold text-charcoal text-lg">{t('contact.info.facebook_label')}</h3>
+                    <a
+                      href={t('contact.info.facebook_url')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                    >
+                      facebook.com/ProjectDignityHobbs
+                    </a>
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -100,13 +117,7 @@ const Contact = () => {
                     <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                     </div>
-                    <p className="text-xl font-bold mb-2">{t('contact.form.success')}</p>
-                    <button 
-                      onClick={() => setIsSuccess(false)}
-                      className="mt-4 text-primary font-bold hover:underline focus:outline-none"
-                    >
-                      Send another message
-                    </button>
+                    <p className="text-xl font-bold">{t('contact.form.success')}</p>
                   </div>
                 ) : (
                   <form 
@@ -139,12 +150,12 @@ const Contact = () => {
                   >
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.name')} *</label>
-                      <input type="text" id="name" name="name" required placeholder="Enter your full name" className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.name ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.name ? 'err-name' : undefined} />
+                      <input type="text" id="name" name="name" required className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.name ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.name ? 'err-name' : undefined} />
                       {errors.name && <p id="err-name" role="alert" className="mt-1 text-sm text-red-600">{errors.name}</p>}
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.form.email')} *</label>
-                      <input type="email" id="email" name="email" required placeholder="you@domain.org" className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.email ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.email ? 'err-email' : undefined} />
+                      <input type="email" id="email" name="email" required className={`w-full px-4 py-3 border rounded-lg focus:ring-accent focus:border-accent ${errors.email ? 'border-red-500' : 'border-gray-300'}`} aria-describedby={errors.email ? 'err-email' : undefined} />
                       {errors.email && <p id="err-email" role="alert" className="mt-1 text-sm text-red-600">{errors.email}</p>}
                     </div>
                     <div>
@@ -166,10 +177,6 @@ const Contact = () => {
                     {isError && (
                       <p role="alert" className="text-sm text-red-600 text-center">{t('contact.form.error')}</p>
                     )}
-
-                    <p className="text-xs text-gray-400 text-center mt-4">
-                      {t('contact.form.spam_note')}
-                    </p>
                   </form>
                 )}
               </div>

@@ -29,20 +29,10 @@ const SEO = ({ title, description, path = '/', type = 'website', breadcrumbs, ar
       "width": 200,
       "height": 200
     },
-    "email": "hello@projectdignity.org",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Community Way",
-      "addressLocality": "Hobbs",
-      "addressRegion": "NM",
-      "postalCode": "88240",
-      "addressCountry": "US"
-    },
+    "email": "jerichog0731@gmail.com",
+    "foundingDate": "2026",
     "sameAs": [
-      "https://www.facebook.com/projectdignityhobbs",
-      "https://www.instagram.com/projectdignityhobbs",
-      "https://twitter.com/projectdignity"
+      "https://www.facebook.com/ProjectDignityHobbs"
     ]
   };
 
