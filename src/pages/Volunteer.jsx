@@ -38,7 +38,7 @@ const Volunteer = () => {
             {[
               { icon: '🧼', title: 'Supply Distribution', desc: 'Help sort, pack, and hand out hygiene and cleaning supplies at our distribution events.' },
               { icon: '📣', title: 'Community Outreach', desc: 'Spread the word about Project Dignity in your neighborhood, church, or workplace.' },
-              { icon: '🌱', title: 'Events Support', desc: 'Assist at our public launch and future Farmers Market events starting June 7, 2026.' },
+              { icon: '🌱', title: 'Events Support', desc: 'Assist at our public launch and future Farmers Market events starting June 13, 2026.' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="bg-white p-8 rounded-xl shadow-md border-t-4 border-accent text-center">
                 <div className="text-4xl mb-4">{icon}</div>
@@ -124,8 +124,8 @@ const Volunteer = () => {
 
           <p className="text-center text-sm text-gray-500 mt-6">
             Questions? Email us at{' '}
-            <a href="mailto:jgutierrez@projectdignityhobbs.org" className="text-primary font-medium hover:underline">
-              jgutierrez@projectdignityhobbs.org
+            <a href="mailto:jerichog0731@gmail.com" className="text-primary font-medium hover:underline">
+              jerichog0731@gmail.com
             </a>
           </p>
         </div>

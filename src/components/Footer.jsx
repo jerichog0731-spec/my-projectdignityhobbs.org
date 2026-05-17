@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NewsletterSignup from './NewsletterSignup';
 
@@ -52,8 +53,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
           <p>{t('footer.rights')}</p>
           <div className="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
-            <a href="/privacy" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none">Privacy Policy</a>
-            <a href="/accessibility" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none">Accessibility Statement</a>
+            <Link to="/privacy" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none">Privacy Policy</Link>
+            <Link to="/accessibility" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none">Accessibility Statement</Link>
             <span className="hidden md:inline">|</span>
             <a href={t('footer.facebook_url')} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none" aria-label="Facebook">{t('footer.facebook')}</a>
           </div>
