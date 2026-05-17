@@ -11,24 +11,9 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://projectdignityhobbs.org/programs</loc>
+    <loc>https://projectdignityhobbs.org/what-we-distribute</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://projectdignityhobbs.org/programs/community-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://projectdignityhobbs.org/programs/workforce</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://projectdignityhobbs.org/programs/youth</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://projectdignityhobbs.org/get-involved</loc>

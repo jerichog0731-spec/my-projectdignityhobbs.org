@@ -95,11 +95,26 @@ const About = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
             {t('about.partners.intro')}
           </p>
-          <div className="max-w-xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 text-center">
-              <h3 className="text-xl font-bold text-primary mb-3">{t('about.partners.1.name')}</h3>
-              <p className="text-gray-600">{t('about.partners.1.desc')}</p>
-            </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <div key={num} className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 text-center">
+                <h3 className="text-xl font-bold text-primary mb-3">{t(`about.partners.${num}.name`)}</h3>
+                <p className="text-gray-600 text-sm">{t(`about.partners.${num}.desc`)}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">{t('about.vol_partners.title')}</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+            {t('about.vol_partners.intro')}
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {[1, 2].map((num) => (
+              <div key={num} className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 text-center">
+                <h3 className="text-xl font-bold text-primary mb-3">{t(`about.vol_partners.${num}.name`)}</h3>
+                <p className="text-gray-600 text-sm">{t(`about.vol_partners.${num}.desc`)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

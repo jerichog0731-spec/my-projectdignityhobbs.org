@@ -11,8 +11,8 @@ const Programs = () => {
       <SEO 
         title={t('seo.programs.title')} 
         description={t('seo.programs.desc')} 
-        path="/programs"
-        breadcrumbs={[{ name: t('nav.programs'), path: '/programs' }]}
+        path="/what-we-distribute"
+        breadcrumbs={[{ name: t('nav.programs'), path: '/what-we-distribute' }]}
       />
       
       {/* Hero */}

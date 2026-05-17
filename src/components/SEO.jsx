@@ -29,7 +29,7 @@ const SEO = ({ title, description, path = '/', type = 'website', breadcrumbs, ar
       "width": 200,
       "height": 200
     },
-    "email": "jerichog0731@gmail.com",
+    "email": "jgutierrez@projectdignityhobbs.org",
     "foundingDate": "2026",
     "sameAs": [
       "https://www.facebook.com/ProjectDignityHobbs"

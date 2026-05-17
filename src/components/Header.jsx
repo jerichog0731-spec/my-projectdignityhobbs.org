@@ -13,7 +13,7 @@ const Header = () => {
   const navLinks = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.about'), path: '/about' },
-    { name: t('nav.programs'), path: '/programs' },
+    { name: t('nav.programs'), path: '/what-we-distribute' },
     { name: t('nav.events'), path: '/events' },
     { name: t('nav.get_involved'), path: '/get-involved' },
     { name: t('nav.volunteer'), path: '/volunteer' },

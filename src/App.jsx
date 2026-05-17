@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Donate from './pages/Donate';
@@ -31,11 +32,12 @@ function App() {
       </a>
 
       <Header />
+      <ScrollToTop />
       <main className="flex-grow focus:outline-none" tabIndex="-1" id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
+          <Route path="/what-we-distribute" element={<Programs />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:eventId" element={<EventDetail />} />
