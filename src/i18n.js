@@ -84,9 +84,8 @@ const resources = {
       "programs.serve.5": "Unhoused and housing-unstable individuals",
       "programs.serve.6": "Households receiving SNAP or WIC (which cannot be used for hygiene or cleaning products)",
       "programs.cta.title": "Need Supplies?",
-      "programs.cta.desc": "Come see us any Saturday from June 13 through October 31, 2026 at the Hobbs America Farmers Market at Green Meadows Lake. 9:00 AM – 12:00 PM or 1:00 PM. Free. No paperwork.",
+      "programs.cta.desc": "Come see us any Saturday from June 13 through October 31, 2026 at the Hobbs America Farmers Market at Green Meadows Lake. 9:00 AM \u2013 12:00 PM or 1:00 PM. Free. No paperwork.",
       "programs.cta.button": "Volunteer or Donate",
-
       "seo.donate.title": "Donate to Project Dignity Hobbs",
       "seo.donate.desc": "Support Project Dignity Hobbs with a donation on GoFundMe. Your gift funds free hygiene products, laundry supplies, and cleaning supplies for Hobbs, NM residents.",
       "donate.headline": "Help Us Fill the Gap",
@@ -109,7 +108,7 @@ const resources = {
       "donate.disclaimer": "Project Dignity Hobbs is an unincorporated community initiative actively pursuing fiscal sponsorship. All donations fund direct community supply distribution.",
 
       "seo.involved.title": "Partner With Project Dignity Hobbs",
-      "seo.involved.desc": "Churches, businesses, storage providers, and community organizations — learn how to partner with Project Dignity Hobbs to extend hygiene and cleaning supply access in Hobbs, NM.",
+      "seo.involved.desc":"Churches, businesses, storage providers, and community organizations — learn how to partner with Project Dignity Hobbs to extend hygiene and cleaning supply access in Hobbs, NM.",
       "involved.title": "Partner With Us",
       "involved.intro": "Project Dignity Hobbs is built on partnerships. If your church, business, or organization wants to help extend hygiene and cleaning supply access to more Hobbs neighbors, we want to hear from you.",
       "involved.why.title": "Why Partner?",
@@ -141,14 +140,13 @@ const resources = {
       "events.title": "Find Us Every Saturday",
       "events.intro": "Every Saturday from June 13 through October 31, 2026, Project Dignity Hobbs operates a free distribution booth at the Hobbs America Farmers Market at Green Meadows Lake in Hobbs, NM.",
       "events.featured.title": "Saturday Distribution at the Farmers Market",
-      "events.featured.dates": "Every Saturday, June 13 – October 31, 2026",
-      "events.featured.time": "9:00 AM – 12:00 PM (or 1:00 PM, weather permitting)",
+      "events.featured.dates": "Every Saturday, June 13 \u2013 October 31, 2026",
+      "events.featured.time": "9:00 AM \u2013 12:00 PM (or 1:00 PM, weather permitting)",
       "events.featured.location": "Hobbs America Farmers Market at Green Meadows Lake, Hobbs, NM",
       "events.featured.desc": "Show up. No paperwork. No income verification. No questions. Receive free hygiene products, laundry supplies, and household cleaning supplies.",
       "events.more.title": "More Events Coming Soon",
       "events.more.desc": "As we grow, we'll add community events, partner distribution days, and volunteer opportunities. Follow us on Facebook for the latest updates.",
       "events.facebook.button": "Follow on Facebook",
-      "events.button.rsvp": "RSVP Now",
 
       "seo.contact.title": "Contact Project Dignity Hobbs",
       "seo.contact.desc": "Reach Jericho Gutierrez at jerichog0731@gmail.com or 575-552-3403. Questions about distribution, volunteering, or partnership? We'd love to hear from you.",
@@ -172,24 +170,22 @@ const resources = {
       "contact.info.location_label": "Location",
       "contact.info.location_val": "Hobbs, New Mexico",
       "contact.info.hours_label": "Distribution Hours",
-      "contact.info.hours_val": "Every Saturday, June 13 – October 31, 2026 | 9:00 AM – 12:00 PM or 1:00 PM at Hobbs America Farmers Market at Green Meadows Lake",
+      "contact.info.hours_val": "Every Saturday, June 13 \u2013 October 31, 2026 | 9:00 AM \u2013 12:00 PM or 1:00 PM at Hobbs America Farmers Market at Green Meadows Lake",
       "contact.info.facebook_label": "Facebook",
       "contact.info.facebook_url": "https://www.facebook.com/ProjectDignityHobbs",
-
       "seo.privacy.title": "Privacy Policy",
-      "seo.privacy.desc": "Read Project Dignity Hobbs\u2019 Privacy Policy to learn how we protect your data.",
+      "seo.privacy.desc": "Read Project Dignity Hobbs' Privacy Policy to learn how we protect your data.",
       "privacy.title": "Privacy Policy",
       "privacy.body1": "At Project Dignity Hobbs, your privacy is a priority. We are committed to protecting the personal information of our community members, volunteers, and donors.",
       "privacy.body2": "Donor Data Handling: We collect basic contact and payment information solely for processing donations and issuing tax receipts. All online transactions are encrypted and processed securely via Stripe. We do not store full credit card numbers on our servers.",
       "privacy.body3": "No Sale of Data: Project Dignity will never sell, trade, or share your personal data, including email addresses and phone numbers, with third parties for marketing purposes.",
-
       "seo.accessibility.title": "Accessibility Statement",
       "seo.accessibility.desc": "Project Dignity is committed to ensuring digital accessibility for people with disabilities.",
       "accessibility.title": "Accessibility Statement",
       "accessibility.body1": "Project Dignity Hobbs is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.",
       "accessibility.body2": "Conformance Status: We strive to ensure our website conforms to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. This includes semantic HTML, keyboard navigation support, and ARIA landmarks.",
       "accessibility.body3": "Feedback: We welcome your feedback on the accessibility of our site. If you encounter accessibility barriers, please contact us immediately so we can address the issue.",
-
+      "events.button.rsvp": "RSVP Now",
       "seo.event_detail.title": "Event RSVP",
       "seo.event_detail.desc": "RSVP for an upcoming Project Dignity event.",
       "event_detail.back": "Back to Calendar",
@@ -202,13 +198,13 @@ const resources = {
 
       "seo.about.title": "About Project Dignity Hobbs — Mission, Community Values & Origin Story",
       "seo.about.desc": "Learn how Project Dignity Hobbs was founded, the 8 values guiding our work, and our real timeline of impact in Hobbs, NM.",
-
+      
       "about.mission.title": "Our Mission",
       "about.mission.text": "No neighbor in Hobbs should choose between their bills and their basic dignity.",
-
+      
       "about.vision.title": "Why We Exist",
       "about.vision.text": "Project Dignity Hobbs fills the gap no other Hobbs organization has filled: Saturday distribution of hygiene and household cleaning supplies, with no paperwork, no questions, and no barriers.",
-
+      
       "about.values.title": "What We Stand For",
       "about.values.1.title": "Dignity",
       "about.values.1.desc": "Every person deserves the conditions to show up fully in life - for school, for work, for their family, for themselves. Hygiene is not a reward for financial stability. It is a foundation.",
@@ -228,7 +224,7 @@ const resources = {
       "about.values.8.desc": "No initiative succeeds alone. Every partner organization in the network makes the whole network stronger.",
 
       "about.founder.title": "Why I Started This",
-      "about.founder.name": "— Jericho Gutierrez, Founder",
+      "about.founder.name": "\u2014 Jericho Gutierrez, Founder",
       "about.founder.story": "I started Project Dignity Hobbs because I was living inside the gap it is designed to fill. Every month, I face a choice that no person should have to face. When my bills come due, I have to decide: pay what I owe, or buy hygiene products, cleaning supplies, and laundry detergent. Most months, I cannot do both.\n\nBefore I built anything, I researched every organization in Hobbs I could find. I spoke with staff. I visited. I asked hard questions. I found real organizations doing real work - but I also found that not one of them could offer household cleaning supplies consistently. Not one offered anything on Saturdays. And not one could reach the workers and students whose schedules never align with a weekday morning service window.\n\nI thought: I cannot be the only one going through this.\n\nSo I started. Project Dignity Hobbs opens June 13, 2026. Every Saturday. Free. No paperwork. For every neighbor in Hobbs who has been carrying this gap alone.",
 
       "about.partners.title": "Distribution Partners",
@@ -241,7 +237,7 @@ const resources = {
       "about.timeline.1.desc": "Fiscal sponsorship proposals submitted to United Way of Lea County and The Salvation Army. Distribution partner meetings underway. Storage and laundromat partnerships in negotiation.",
       "about.timeline.2.year": "June 13, 2026",
       "about.timeline.2.desc": "Official launch — first Saturday distribution at Hobbs America Farmers Market at Green Meadows Lake.",
-      "about.timeline.3.year": "June–October 2026",
+      "about.timeline.3.year": "June\u2013October 2026",
       "about.timeline.3.desc": "Weekly Saturday distribution — approximately 21 Saturdays, 9:00 AM to 12:00 PM or 1:00 PM, weather permitting.",
       "about.timeline.4.year": "October 31, 2026",
       "about.timeline.4.desc": "Farmers Market season closes — final Saturday at primary venue.",
@@ -305,7 +301,7 @@ const resources = {
       "programs.title": "Qu\u00e9 Distribuimos",
       "programs.intro": "Cada s\u00e1bado del 13 de junio al 31 de octubre de 2026, proporcionamos productos de higiene, suministros de lavander\u00eda y productos de limpieza del hogar gratis a cualquier residente de Hobbs o el Condado de Lea que los necesite. Sin verificaci\u00f3n de ingresos. Sin papeleo. Sin barreras.",
       "programs.hygiene.title": "Productos de Higiene",
-      "programs.hygiene.desc": "Champ\u00fa, acondicionador, jab\u00f3n corporal, desodorante, cepillos de dientes, pasta de dientes, hilo dental, enjuague bucal, productos de higiene femenina, rastrillos, crema de afeitar, loci\u00f3n, chapstick, hisopos, corta\u00fanas, peines, limpiador facial, protector solar y art\u00edculos para beb\u00e9s.",
+      "programs.hygiene.desc": "Champ\u00fa, acondicionador, jab\u00f3n corporal, desodorante, cepillos de dientes, pasta de dientes, hilo dental, enjuague bucal, productos de higiene femenina, rastrillos, crema de afeitar, loci\u00f3n, chapstick, hisopos, corta\u00f1as, peines, limpiador facial, protector solar y art\u00edculos para beb\u00e9s.",
       "programs.laundry.title": "Suministros de Lavander\u00eda",
       "programs.laundry.desc": "Detergente para ropa (l\u00edquido, en polvo y en c\u00e1psulas), suavizante de telas, hojas de secadora, quitamanchas, bolsas de malla para ropa y monedas para lavander\u00eda cuando est\u00e9n disponibles.",
       "programs.cleaning.title": "Productos de Limpieza del Hogar",
@@ -331,12 +327,12 @@ const resources = {
       "programs.serve.5": "Personas sin hogar o con vivienda inestable",
       "programs.serve.6": "Hogares que reciben SNAP o WIC (que no se puede usar para productos de higiene o limpieza)",
       "programs.cta.title": "\u00bfNecesita Suministros?",
-      "programs.cta.desc": "Vis\u00edtenos cualquier s\u00e1bado del 13 de junio al 31 de octubre de 2026 en el Mercado de Agricultores de Hobbs en Green Meadows Lake. 9:00 AM – 12:00 PM o 1:00 PM. Gratis. Sin papeleo.",
+      "programs.cta.desc": "Vis\u00edtenos cualquier s\u00e1bado del 13 de junio al 31 de octubre de 2026 en el Mercado de Agricultores de Hobbs en Green Meadows Lake. 9:00 AM \u2013 12:00 PM o 1:00 PM. Gratis. Sin papeleo.",
       "programs.cta.button": "Ser Voluntario o Donar",
 
       "seo.donate.title": "Donar a Project Dignity Hobbs",
       "seo.donate.desc": "Apoye a Project Dignity Hobbs con una donaci\u00f3n en GoFundMe. Su donaci\u00f3n financia productos de higiene, suministros de lavander\u00eda y productos de limpieza gratis para residentes de Hobbs, NM.",
-      "donate.headline": "Ay\u00fcdanos a Llenar el Vac\u00edo",
+      "donate.headline": "Ay\u00fadanos a Llenar el Vac\u00edo",
       "donate.intro": "Cada d\u00f3lar que dona se destina a comprar productos de higiene, suministros de lavander\u00eda y productos de limpieza — y llevarlos a los vecinos de Hobbs que los necesitan cada s\u00e1bado.",
       "donate.gofundme.button": "Donar en GoFundMe",
       "donate.gofundme.url": "https://www.gofundme.com/f/project-dignity-hobbs-community-essentials",
@@ -363,7 +359,7 @@ const resources = {
       "involved.why.desc": "Al asociarse con Project Dignity Hobbs, su organizaci\u00f3n se convierte en parte de una red creciente que llena un vac\u00edo real — distribuci\u00f3n de suministros el s\u00e1bado que ning\u00fan programa gubernamental cubre.",
       "involved.types.title": "Oportunidades de Asociaci\u00f3n",
       "involved.types.1.title": "Socio de Distribuci\u00f3n",
-      "involved.types.1.desc": "Reciba kits de higiene y suministros de limpieza ensamblados de Project Dignity Hobbs y distrib\u00fayalos a sus clientes o congregaci\u00f3n existentes.",
+      "involved.types.1.desc": "Reciba kits de higiene y suministros de limpieza ensamblados de Project Dignity Hobbs y distribúyalos a sus clientes o congregaci\u00f3n existentes.",
       "involved.types.2.title": "Donante de Suministros",
       "involved.types.2.desc": "Done productos de higiene, suministros de limpieza o art\u00edculos de lavander\u00eda nuevos y sin abrir a granel. Ideal para empresas, iglesias o campa\u00f1as comunitarias.",
       "involved.types.3.title": "Socio de Almacenamiento",
@@ -388,14 +384,13 @@ const resources = {
       "events.title": "Encu\u00e9ntranos Cada S\u00e1bado",
       "events.intro": "Cada s\u00e1bado del 13 de junio al 31 de octubre de 2026, Project Dignity Hobbs opera un puesto de distribuci\u00f3n gratuita en el Mercado de Agricultores de Hobbs en Green Meadows Lake en Hobbs, NM.",
       "events.featured.title": "Distribuci\u00f3n de los S\u00e1bados en el Mercado de Agricultores",
-      "events.featured.dates": "Cada s\u00e1bado, 13 de junio – 31 de octubre de 2026",
-      "events.featured.time": "9:00 AM – 12:00 PM (o 1:00 PM, seg\u00fan el clima)",
+      "events.featured.dates": "Cada s\u00e1bado, 13 de junio \u2013 31 de octubre de 2026",
+      "events.featured.time": "9:00 AM \u2013 12:00 PM (o 1:00 PM, seg\u00fan el clima)",
       "events.featured.location": "Mercado de Agricultores de Hobbs en Green Meadows Lake, Hobbs, NM",
       "events.featured.desc": "Pres\u00e9ntese. Sin papeleo. Sin verificaci\u00f3n de ingresos. Sin preguntas. Reciba productos de higiene, suministros de lavander\u00eda y productos de limpieza del hogar gratis.",
       "events.more.title": "M\u00e1s Eventos Pr\u00f3ximamente",
       "events.more.desc": "A medida que crecemos, agregaremos eventos comunitarios, d\u00edas de distribuci\u00f3n de socios y oportunidades de voluntariado. S\u00edganos en Facebook para las \u00faltimas actualizaciones.",
       "events.facebook.button": "Seguir en Facebook",
-      "events.button.rsvp": "Confirmar Asistencia",
 
       "seo.contact.title": "Contactar a Project Dignity Hobbs",
       "seo.contact.desc": "Comun\u00edquese con Jericho Gutierrez en jerichog0731@gmail.com o 575-552-3403. \u00bfPreguntas sobre distribuci\u00f3n, voluntariado o asociaci\u00f3n? Nos encantar\u00eda escucharle.",
@@ -419,7 +414,7 @@ const resources = {
       "contact.info.location_label": "Ubicaci\u00f3n",
       "contact.info.location_val": "Hobbs, Nuevo M\u00e9xico",
       "contact.info.hours_label": "Horario de Distribuci\u00f3n",
-      "contact.info.hours_val": "Cada s\u00e1bado, 13 de junio – 31 de octubre de 2026 | 9:00 AM – 12:00 PM o 1:00 PM en el Mercado de Agricultores de Hobbs en Green Meadows Lake",
+      "contact.info.hours_val": "Cada s\u00e1bado, 13 de junio \u2013 31 de octubre de 2026 | 9:00 AM \u2013 12:00 PM o 1:00 PM en el Mercado de Agricultores de Hobbs en Green Meadows Lake",
       "contact.info.facebook_label": "Facebook",
       "contact.info.facebook_url": "https://www.facebook.com/ProjectDignityHobbs",
 
@@ -429,14 +424,13 @@ const resources = {
       "privacy.body1": "En Project Dignity Hobbs, su privacidad es una prioridad. Estamos comprometidos a proteger la informaci\u00f3n personal de nuestros miembros de la comunidad, voluntarios y donantes.",
       "privacy.body2": "Manejo de Datos de Donantes: Recopilamos informaci\u00f3n b\u00e1sica de contacto \u00fanicamente para procesar donaciones. No almacenamos n\u00fameros de tarjetas de cr\u00e9dito completos en nuestros servidores.",
       "privacy.body3": "No Venta de Datos: Project Dignity nunca vender\u00e1, intercambiar\u00e1 ni compartir\u00e1 sus datos personales, incluidas las direcciones de correo electr\u00f3nico y los n\u00fameros de tel\u00e9fono, con terceros.",
-
       "seo.accessibility.title": "Declaraci\u00f3n de Accesibilidad",
       "seo.accessibility.desc": "Project Dignity Hobbs est\u00e1 comprometido a garantizar la accesibilidad digital para personas con discapacidades.",
       "accessibility.title": "Declaraci\u00f3n de Accesibilidad",
       "accessibility.body1": "Project Dignity Hobbs est\u00e1 comprometido a garantizar la accesibilidad digital para personas con discapacidades. Mejoramos continuamente la experiencia del usuario para todos y aplicamos los est\u00e1ndares de accesibilidad relevantes.",
       "accessibility.body2": "Estado de Conformidad: Nos esforzamos por garantizar que nuestro sitio web cumpla con las Pautas de Accesibilidad al Contenido Web (WCAG) 2.1 Nivel AA.",
       "accessibility.body3": "Comentarios: Agradecemos sus comentarios sobre la accesibilidad de nuestro sitio. Si encuentra barreras de accesibilidad, cont\u00e1ctenos de inmediato.",
-
+      "events.button.rsvp": "Confirmar Asistencia",
       "seo.event_detail.title": "Confirmaci\u00f3n de Asistencia",
       "seo.event_detail.desc": "Confirme su asistencia a un pr\u00f3ximo evento de Project Dignity.",
       "event_detail.back": "Volver al Calendario",
@@ -449,13 +443,13 @@ const resources = {
 
       "seo.about.title": "Sobre Project Dignity Hobbs — Misi\u00f3n, Valores Comunitarios e Historia de Origen",
       "seo.about.desc": "Conozca c\u00f3mo se fund\u00f3 Project Dignity Hobbs, los 8 valores que gu\u00edan nuestro trabajo y nuestra cronolog\u00eda real de impacto en Hobbs, NM.",
-
+      
       "about.mission.title": "Nuestra Misi\u00f3n",
       "about.mission.text": "Ning\u00fan vecino en Hobbs deber\u00eda elegir entre sus facturas y su dignidad b\u00e1sica.",
-
+      
       "about.vision.title": "Por Qu\u00e9 Existimos",
       "about.vision.text": "Project Dignity Hobbs llena el vac\u00edo que ninguna otra organizaci\u00f3n de Hobbs ha llenado: distribuci\u00f3n el s\u00e1bado de productos de higiene y limpieza del hogar, sin papeleo, sin preguntas y sin barreras.",
-
+      
       "about.values.title": "Lo Que Defendemos",
       "about.values.1.title": "Dignidad",
       "about.values.1.desc": "Cada persona merece las condiciones para mostrarse plenamente en la vida — para la escuela, el trabajo, su familia y ellos mismos. La higiene no es una recompensa por la estabilidad financiera. Es una base.",
@@ -475,7 +469,7 @@ const resources = {
       "about.values.8.desc": "Ninguna iniciativa tiene \u00e9xito sola. Cada organizaci\u00f3n socia en la red hace que toda la red sea m\u00e1s fuerte.",
 
       "about.founder.title": "Por Qu\u00e9 Empec\u00e9 Esto",
-      "about.founder.name": "— Jericho Gutierrez, Fundador",
+      "about.founder.name": "\u2014 Jericho Gutierrez, Fundador",
       "about.founder.story": "Empec\u00e9 Project Dignity Hobbs porque estaba viviendo dentro del vac\u00edo que est\u00e1 dise\u00f1ado para llenar. Cada mes, me enfrento a una elecci\u00f3n que ninguna persona deber\u00eda tener que hacer. Cuando llegan mis facturas, tengo que decidir: pagar lo que debo, o comprar productos de higiene, suministros de limpieza y detergente para ropa. La mayor\u00eda de los meses, no puedo hacer ambas cosas.\n\nAntes de construir nada, investigu\u00e9 cada organizaci\u00f3n en Hobbs que pude encontrar. Habl\u00e9 con el personal. Visit\u00e9. Hice preguntas dif\u00edciles. Encontr\u00e9 organizaciones reales haciendo trabajo real — pero tambi\u00e9n encontr\u00e9 que ninguna de ellas pod\u00eda ofrecer suministros de limpieza del hogar de manera consistente. Ninguna ofrec\u00eda nada los s\u00e1bados. Y ninguna pod\u00eda llegar a los trabajadores y estudiantes cuyos horarios nunca se alinean con una ventana de servicio de ma\u00f1ana entre semana.\n\nPens\u00e9: No puedo ser el \u00fanico que est\u00e1 pasando por esto.\n\nAs\u00ed que empec\u00e9. Project Dignity Hobbs abre el 13 de junio de 2026. Cada s\u00e1bado. Gratis. Sin papeleo. Para cada vecino en Hobbs que ha estado cargando este vac\u00edo solo.",
 
       "about.partners.title": "Socios de Distribuci\u00f3n",
@@ -488,7 +482,7 @@ const resources = {
       "about.timeline.1.desc": "Propuestas de patrocinio fiscal enviadas a United Way del Condado de Lea y El Ej\u00e9rcito de Salvaci\u00f3n. Reuniones con socios de distribuci\u00f3n en curso. Asociaciones de almacenamiento y lavander\u00eda en negociaci\u00f3n.",
       "about.timeline.2.year": "13 de junio de 2026",
       "about.timeline.2.desc": "Lanzamiento oficial — primera distribuci\u00f3n del s\u00e1bado en el Mercado de Agricultores de Hobbs en Green Meadows Lake.",
-      "about.timeline.3.year": "Junio–Octubre 2026",
+      "about.timeline.3.year": "Junio\u2013Octubre 2026",
       "about.timeline.3.desc": "Distribuci\u00f3n semanal de los s\u00e1bados — aproximadamente 21 s\u00e1bados, de 9:00 AM a 12:00 PM o 1:00 PM, seg\u00fan el clima.",
       "about.timeline.4.year": "31 de octubre de 2026",
       "about.timeline.4.desc": "La temporada del Mercado de Agricultores cierra — \u00faltimo s\u00e1bado en el lugar principal.",
