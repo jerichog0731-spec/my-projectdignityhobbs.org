@@ -20,6 +20,7 @@ import Privacy from './pages/Privacy';
 import Accessibility from './pages/Accessibility';
 import SupabaseTodos from './pages/SupabaseTodos';
 import ThankYou from './pages/ThankYou';
+import Volunteer from './pages/Volunteer';
 
 function App() {
   const { t } = useTranslation();
@@ -54,6 +55,7 @@ function App() {
           <Route path="/todos-preview" element={<SupabaseTodos />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/volunteer" element={<Volunteer />} />
         </Routes>
       </main>
       <Footer />
