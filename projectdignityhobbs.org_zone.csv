@@ -1,0 +1,21 @@
+name,ttl,type,content,prio
+_domainkey.projectdignityhobbs.org,,,,
+projectdignityhobbs.org,3600,A,185.199.108.153,0
+projectdignityhobbs.org,3600,A,185.199.109.153,0
+projectdignityhobbs.org,3600,A,185.199.110.153,0
+projectdignityhobbs.org,3600,A,185.199.111.153,0
+projectdignityhobbs.org,3600,AAAA,2606:50c0:8000::153,0
+projectdignityhobbs.org,3600,AAAA,2606:50c0:8001::153,0
+projectdignityhobbs.org,3600,AAAA,2606:50c0:8002::153,0
+projectdignityhobbs.org,3600,AAAA,2606:50c0:8003::153,0
+www.projectdignityhobbs.org,3600,CNAME,jerichog0731-spec.github.io,0
+projectdignityhobbs.org,3600,MX,mx.zoho.com,10
+projectdignityhobbs.org,3600,MX,mx2.zoho.com,20
+projectdignityhobbs.org,3600,MX,mx3.zoho.com,50
+projectdignityhobbs.org,86400,NS,ns.inwx.com,0
+projectdignityhobbs.org,86400,NS,ns2.inwx.com,0
+projectdignityhobbs.org,86400,NS,ns3.inwx.eu,0
+projectdignityhobbs.org,86400,SOA,"ns.inwx.com hostmaster.inwx.de 2026051013 10800 3600 1209600 3600",0
+projectdignityhobbs.org,3600,TXT,zoho-verification=zb67211321.zmverify.zoho.com,0
+projectdignityhobbs.org,3600,TXT,"v=spf1 include:zohomail.com ~all",0
+zmail._domainkey.projectdignityhobbs.org,3600,TXT,"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxxpuNtBcEdnwP1eg3haOFB/ifs7R1JbUfvTpEriaJ7TBOf65vrb0z+ufrsROm/wl+RbGJG1t8GsKHLPC1eApL6AZ3ulKw5fazUsatQDJLmfdSeOPQyEnwhuhNFxZYWXGNzYZaTH8a0APu/OlGeEDPXYIqQ3pIabDXC7Y4/jTSQIDAQAB",0
